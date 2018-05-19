@@ -1,6 +1,5 @@
 import argparse
-import Models , LoadBatches
-from keras.models import load_model
+import LoadBatches
 import glob
 import cv2
 import numpy as np
@@ -25,7 +24,7 @@ input_width =  args.input_width
 input_height = args.input_height
 epoch_number = args.epoch_number
 
-modelFns = { 'vgg_segnet':Models.VGGSegnet.VGGSegnet , 'vgg_unet':Models.VGGUnet.VGGUnet , 'vgg_unet2':Models.VGGUnet.VGGUnet2 , 'fcn8':Models.FCN8.FCN8 , 'fcn32':Models.FCN32.FCN32   }
+modelFns = { 'vgg_segnet': NNModels.VGGSegnet.VGGSegnet , 'vgg_unet': NNModels.VGGUnet.VGGUnet , 'vgg_unet2': NNModels.VGGUnet.VGGUnet2 , 'fcn8': NNModels.FCN8.FCN8 , 'fcn32': NNModels.FCN32.FCN32}
 modelFN = modelFns[ model_name ]
 
 m = modelFN( n_classes , input_height=input_height, input_width=input_width   )
