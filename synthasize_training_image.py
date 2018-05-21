@@ -36,27 +36,11 @@ edge = 50
 item_rotate_angle = 45
 offset = 100
 
-def process_image(file):
-    file = file.replace(".jpg", ".png")
-    if file == ".DS_Store" or file in testing_images:
-        return
-    print(file)
-
-    bg_img = None
-    while bg_img is None:
-        bg_img = cv2.imread("../data/texture/" + random.choice(texture_images))
-        x, y = bg_img.shape[:2]
-        if x - 2 * edge - image_size < 0 or y - 2 * edge - image_size < 0:
-            bg_img = None
-
-    x_begin = randint(edge, x - edge - image_size)
-    y_begin = randint(edge, y - edge - image_size)
+def process_image(bg_img, overlay_t_img, x_begin, y_begin):
 
     crop_img = bg_img[x_begin: x_begin + image_size, y_begin:y_begin + image_size]
     rotation_matrix = cv2.getRotationMatrix2D((int(image_size / 2), int(image_size / 2)), randint(-15, 15), 1.2)
     crop_img = cv2.warpAffine(crop_img, rotation_matrix, (image_size, image_size))
-
-    overlay_t_img = cv2.imread("../data/alpha_image/" + file, -1)
 
     H = np.float32([[1, 0, randint(-offset, offset)], [0, 1, randint(-offset, offset)]])
     overlay_t_img = cv2.warpAffine(overlay_t_img, H, (image_size, image_size))  # 需要图像、变换矩阵、变换后的大小
@@ -70,5 +54,26 @@ def process_image(file):
     cv2.imwrite("../data/training_images/" + file, result)
 
 files = os.listdir("../data/mask_image")
+data = []
+for file in files:
+    file = file.replace(".jpg", ".png")
+    if file == ".DS_Store" or file in testing_images:
+        continue
+    print(file)
+
+    bg_img = None
+    while bg_img is None:
+        bg_img = cv2.imread("../data/texture/" + random.choice(texture_images))
+        x, y = bg_img.shape[:2]
+        if x - 2 * edge - image_size < 0 or y - 2 * edge - image_size < 0:
+            bg_img = None
+
+    x_begin = randint(edge, x - edge - image_size)
+    y_begin = randint(edge, y - edge - image_size)
+
+    overlay_t_img = cv2.imread("../data/alpha_image/" + file, -1)
+    data.append((bg_img, overlay_t_img, x_begin, y_begin))
+
+
 pool = multiprocessing.Pool()
-result = pool.map(process_image, files)
+result = pool.map(process_image, data)
