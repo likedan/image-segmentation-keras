@@ -4,16 +4,17 @@ import glob
 import cv2
 import numpy as np
 import random
+import VGGUnet
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--save_weights_path", type = str  )
-parser.add_argument("--epoch_number", type = int, default = 5 )
-parser.add_argument("--test_images", type = str , default = "")
-parser.add_argument("--output_path", type = str , default = "")
-parser.add_argument("--input_height", type=int , default = 224  )
+parser.add_argument("--save_weights_path", type = str, default="weights/r" )
+parser.add_argument("--epoch_number", type = int, default = 0 )
+parser.add_argument("--test_images", type = str , default = "../data/testing_images/")
+parser.add_argument("--output_path", type = str , default = "../result/")
+parser.add_argument("--input_height", type=int , default = 224 )
 parser.add_argument("--input_width", type=int , default = 224 )
-parser.add_argument("--model_name", type = str , default = "")
-parser.add_argument("--n_classes", type=int )
+parser.add_argument("--n_classes", type=int, default=2 )
+parser.add_argument("--model_name", type = str , default = "vgg_segnet")
 
 args = parser.parse_args()
 
@@ -24,8 +25,8 @@ input_width =  args.input_width
 input_height = args.input_height
 epoch_number = args.epoch_number
 
-modelFns = { 'vgg_segnet': NNModels.VGGSegnet.VGGSegnet , 'vgg_unet': NNModels.VGGUnet.VGGUnet , 'vgg_unet2': NNModels.VGGUnet.VGGUnet2 , 'fcn8': NNModels.FCN8.FCN8 , 'fcn32': NNModels.FCN32.FCN32}
-modelFN = modelFns[ model_name ]
+#modelFns = { 'vgg_segnet': NNModels.VGGSegnet.VGGSegnet , 'vgg_unet': NNModels.VGGUnet.VGGUnet , 'vgg_unet2': NNModels.VGGUnet.VGGUnet2 , 'fcn8': NNModels.FCN8.FCN8 , 'fcn32': NNModels.FCN32.FCN32}
+modelFN = VGGUnet.VGGUnet
 
 m = modelFN( n_classes , input_height=input_height, input_width=input_width   )
 m.load_weights(  args.save_weights_path + "." + str(  epoch_number )  )

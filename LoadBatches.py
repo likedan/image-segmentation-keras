@@ -3,9 +3,10 @@ import numpy as np
 import cv2
 import glob
 import itertools
+import cv2
 
 
-def getImageArr( path , width , height , imgNorm="sub_mean" , odering='channels_first' ):
+def getImageArr( path , width , height , imgNorm="divide" , odering='channels_first' ):
 
 	try:
 		img = cv2.imread(path, 1)

@@ -1,21 +1,21 @@
 import argparse
 import LoadBatches
-import VGGSegnet
+import VGGUnet
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--save_weights_path", type = str, default="weights/res1" )
+parser.add_argument("--save_weights_path", type = str, default="weights/r" )
 parser.add_argument("--train_images", type = str, default="../data/training_images/" )
 parser.add_argument("--train_annotations", type = str, default="../data/training_images_annotation/"  )
 parser.add_argument("--n_classes", type=int, default=2)
-parser.add_argument("--input_height", type=int , default = 224  )
-parser.add_argument("--input_width", type=int , default = 224 )
+parser.add_argument("--input_height", type=int , default = 500  )
+parser.add_argument("--input_width", type=int , default = 500 )
 
-parser.add_argument('--validate',action='store_false', default = False)
-parser.add_argument("--val_images", type = str , default = "../data/dataset1/images_prepped_test/")
-parser.add_argument("--val_annotations", type = str , default = "../data/dataset1/annotations_prepped_test/")
+parser.add_argument('--validate',action='store_false', default = True)
+parser.add_argument("--val_images", type = str , default = "../data/testing_images/")
+parser.add_argument("--val_annotations", type = str , default = "../data/testing_images_annotation/")
 
-parser.add_argument("--epochs", type = int, default = 5 )
+parser.add_argument("--epochs", type = int, default = 1 )
 parser.add_argument("--batch_size", type = int, default = 8 )
 parser.add_argument("--val_batch_size", type = int, default = 8 )
 parser.add_argument("--load_weights", type = str , default = "")
@@ -46,7 +46,7 @@ if validate:
 	val_batch_size = args.val_batch_size
 
 # modelFns = { 'vgg_segnet': Models.VGGSegnet.VGGSegnet , 'vgg_unet': Models.VGGUnet.VGGUnet , 'vgg_unet2': Models.VGGUnet.VGGUnet2 , 'fcn8': Models.FCN8.FCN8 , 'fcn32': Models.FCN32.FCN32}
-modelFN = VGGSegnet.VGGSegnet
+modelFN = VGGUnet.VGGUnet
 
 m = modelFN( n_classes , input_height=input_height, input_width=input_width)
 m.compile(loss='categorical_crossentropy',

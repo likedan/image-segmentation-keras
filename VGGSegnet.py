@@ -7,7 +7,7 @@ file_path = os.path.dirname( os.path.abspath(__file__) )
 VGG_Weights_path = file_path+"/../data/vgg16_weights_th_dim_ordering_th_kernels.h5"
 
 
-def VGGSegnet( n_classes ,  input_height=416, input_width=608 , vgg_level=3):
+def VGGSegnet( n_classes ,  input_height=500, input_width=500 , vgg_level=3):
 
 	img_input = Input(shape=(3,input_height,input_width))
 
