@@ -3,6 +3,7 @@ import numpy as np
 import os
 import random
 from random import randint
+import multiprocessing
 
 def transparentOverlay(src, overlay, pos=(0, 0), scale=1):
     """
@@ -33,11 +34,12 @@ texture_images.remove(".DS_Store")
 image_size = 500
 edge = 50
 item_rotate_angle = 30
+offset = 100
 
-for file in os.listdir("data/mask_image"):
+def process_image(file):
     file = file.replace(".jpg", ".png")
-    if file == ".DS_Store" or file in testing_images :
-        continue
+    if file == ".DS_Store" or file in testing_images:
+        return
     print(file)
 
     bg_img = None
@@ -53,8 +55,13 @@ for file in os.listdir("data/mask_image"):
     crop_img = bg_img[x_begin: x_begin + image_size, y_begin:y_begin + image_size]
 
     overlay_t_img = cv2.imread("data/alpha_image/" + file, -1)
+
+    H = np.float32([[1, 0, randint(-offset, offset)], [0, 1, randint(-offset, offset)]])
+    overlay_t_img = cv2.warpAffine(overlay_t_img, H, (image_size, image_size))  # 需要图像、变换矩阵、变换后的大小
+
     rotation_matrix = cv2.getRotationMatrix2D((int(image_size / 2), int(image_size / 2)), randint(-item_rotate_angle, item_rotate_angle), 1)
     overlay_t_img = cv2.warpAffine(overlay_t_img, rotation_matrix, (image_size, image_size))
+
 
     result = transparentOverlay(crop_img, overlay_t_img)
     cv2.imwrite("data/training_images/" + file, result)
@@ -64,3 +71,7 @@ for file in os.listdir("data/mask_image"):
 
     annotation = np.array([a_channel,a_channel,a_channel]).transpose()
     cv2.imwrite("data/training_images_annotation/" + file, annotation)
+
+files = os.listdir("data/mask_image")
+pool = multiprocessing.Pool()
+result = pool.map(process_image, files)
