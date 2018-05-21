@@ -27,7 +27,9 @@ def transparentOverlay(src, overlay, pos=(0, 0), scale=1):
             src[x + i][y + j] = alpha * overlay[i][j][:3] + (1 - alpha) * src[x + i][y + j]
     return src
 
+testing_images = os.listdir("../data/training_images")
 testing_images = os.listdir("../data/testing_images")
+bad_images = os.listdir("../data/bad_images")
 texture_images = os.listdir("../data/texture")
 texture_images.remove(".DS_Store")
 
@@ -57,7 +59,7 @@ files = os.listdir("../data/mask_image")
 data = []
 for file in files:
     file = file.replace(".jpg", ".png")
-    if file == ".DS_Store" or file in testing_images:
+    if file == ".DS_Store" or file in testing_images or file in bad_images:
         continue
     print(file)
 
