@@ -15,7 +15,7 @@ parser.add_argument('--validate',action='store_false', default = True)
 parser.add_argument("--val_images", type = str , default = "../data/testing_images/")
 parser.add_argument("--val_annotations", type = str , default = "../data/testing_images_annotation/")
 
-parser.add_argument("--epochs", type = int, default = 1 )
+parser.add_argument("--epochs", type = int, default = 100 )
 parser.add_argument("--batch_size", type = int, default = 8 )
 parser.add_argument("--val_batch_size", type = int, default = 8 )
 parser.add_argument("--load_weights", type = str , default = "")
@@ -69,6 +69,7 @@ if validate:
 	G2  = LoadBatches.imageSegmentationGenerator( val_images_path , val_segs_path ,  val_batch_size,  n_classes , input_height , input_width , output_height , output_width   )
 
 step_num = int(len(os.listdir("../data/training_images_annotation/")) / train_batch_size)
+val_step_num = int(len(os.listdir("../data/testing_images_annotation/")) / val_batch_size)
 
 
 if not validate:
@@ -78,7 +79,7 @@ if not validate:
 		m.save( save_weights_path + ".model." + str( ep ) )
 else:
 	for ep in range( epochs ):
-		m.fit_generator( G , step_num  , validation_data=G2 , validation_steps=200 ,  epochs=1 )
+		m.fit_generator( G , step_num  , validation_data=G2 , validation_steps=val_step_num ,  epochs=1 )
 		m.save_weights( save_weights_path + "." + str( ep )  )
 		m.save( save_weights_path + ".model." + str( ep ) )
 
