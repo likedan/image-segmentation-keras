@@ -33,7 +33,7 @@ texture_images.remove(".DS_Store")
 
 image_size = 500
 edge = 50
-item_rotate_angle = 30
+item_rotate_angle = 45
 offset = 100
 
 def process_image(file):
@@ -53,6 +53,8 @@ def process_image(file):
     y_begin = randint(edge, y - edge - image_size)
 
     crop_img = bg_img[x_begin: x_begin + image_size, y_begin:y_begin + image_size]
+    rotation_matrix = cv2.getRotationMatrix2D((int(image_size / 2), int(image_size / 2)), randint(-15, 15), 1.2)
+    crop_img = cv2.warpAffine(crop_img, rotation_matrix, (image_size, image_size))
 
     overlay_t_img = cv2.imread("data/alpha_image/" + file, -1)
 
