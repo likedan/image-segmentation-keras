@@ -1,22 +1,23 @@
 import argparse
 import LoadBatches
 import VGGSegnet
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--save_weights_path", type = str, default="weights/res1" )
-parser.add_argument("--train_images", type = str, default="data/training_images/" )
-parser.add_argument("--train_annotations", type = str, default="data/training_images_annotation/"  )
+parser.add_argument("--train_images", type = str, default="../data/training_images/" )
+parser.add_argument("--train_annotations", type = str, default="../data/training_images_annotation/"  )
 parser.add_argument("--n_classes", type=int, default=2)
-parser.add_argument("--input_height", type=int , default = 500  )
-parser.add_argument("--input_width", type=int , default = 500 )
+parser.add_argument("--input_height", type=int , default = 224  )
+parser.add_argument("--input_width", type=int , default = 224 )
 
-parser.add_argument('--validate',action='store_false')
-parser.add_argument("--val_images", type = str , default = "data/dataset1/images_prepped_test/")
-parser.add_argument("--val_annotations", type = str , default = "data/dataset1/annotations_prepped_test/")
+parser.add_argument('--validate',action='store_false', default = False)
+parser.add_argument("--val_images", type = str , default = "../data/dataset1/images_prepped_test/")
+parser.add_argument("--val_annotations", type = str , default = "../data/dataset1/annotations_prepped_test/")
 
 parser.add_argument("--epochs", type = int, default = 5 )
-parser.add_argument("--batch_size", type = int, default = 2 )
-parser.add_argument("--val_batch_size", type = int, default = 2 )
+parser.add_argument("--batch_size", type = int, default = 8 )
+parser.add_argument("--val_batch_size", type = int, default = 8 )
 parser.add_argument("--load_weights", type = str , default = "")
 
 parser.add_argument("--model_name", type = str , default = "vgg_segnet")
@@ -67,14 +68,17 @@ G = LoadBatches.imageSegmentationGenerator( train_images_path , train_segs_path 
 if validate:
 	G2  = LoadBatches.imageSegmentationGenerator( val_images_path , val_segs_path ,  val_batch_size,  n_classes , input_height , input_width , output_height , output_width   )
 
+step_num = int(len(os.listdir("../data/training_images_annotation/")) / train_batch_size)
+
+
 if not validate:
 	for ep in range( epochs ):
-		m.fit_generator( G , 512  , epochs=1 )
+		m.fit_generator( G , step_num  , epochs=1 )
 		m.save_weights( save_weights_path + "." + str( ep ) )
 		m.save( save_weights_path + ".model." + str( ep ) )
 else:
 	for ep in range( epochs ):
-		m.fit_generator( G , 512  , validation_data=G2 , validation_steps=200 ,  epochs=1 )
+		m.fit_generator( G , step_num  , validation_data=G2 , validation_steps=200 ,  epochs=1 )
 		m.save_weights( save_weights_path + "." + str( ep )  )
 		m.save( save_weights_path + ".model." + str( ep ) )
 

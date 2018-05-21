@@ -105,3 +105,4 @@ ENV/
 .ropeproject
 weights/
 
+data.zip
