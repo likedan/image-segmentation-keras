@@ -32,6 +32,7 @@ texture_images.remove(".DS_Store")
 
 image_size = 500
 edge = 50
+item_rotate_angle = 30
 
 for file in os.listdir("data/mask_image"):
     file = file.replace(".jpg", ".png")
@@ -45,12 +46,15 @@ for file in os.listdir("data/mask_image"):
         x, y = bg_img.shape[:2]
         if x - 2 * edge - image_size < 0 or y - 2 * edge - image_size < 0:
             bg_img = None
-    overlay_t_img = cv2.imread("data/alpha_image/" + file, -1)
 
     x_begin = randint(edge, x - edge - image_size)
     y_begin = randint(edge, y - edge - image_size)
 
-    crop_img = bg_img[x_begin: x_begin + 500, y_begin:y_begin + 500]
+    crop_img = bg_img[x_begin: x_begin + image_size, y_begin:y_begin + image_size]
+
+    overlay_t_img = cv2.imread("data/alpha_image/" + file, -1)
+    rotation_matrix = cv2.getRotationMatrix2D((int(image_size / 2), int(image_size / 2)), randint(-item_rotate_angle, item_rotate_angle), 1)
+    overlay_t_img = cv2.warpAffine(overlay_t_img, rotation_matrix, (image_size, image_size))
 
     result = transparentOverlay(crop_img, overlay_t_img)
     cv2.imwrite("data/training_images/" + file, result)
