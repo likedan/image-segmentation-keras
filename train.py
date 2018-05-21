@@ -3,12 +3,12 @@ import LoadBatches
 import VGGSegnet
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--save_weights_path", type = str, default="weights/ex1" )
-parser.add_argument("--train_images", type = str, default="data/dataset1/images_prepped_train/" )
-parser.add_argument("--train_annotations", type = str, default="data/dataset1/annotations_prepped_train/"  )
-parser.add_argument("--n_classes", type=int, default=10)
-parser.add_argument("--input_height", type=int , default = 224  )
-parser.add_argument("--input_width", type=int , default = 224 )
+parser.add_argument("--save_weights_path", type = str, default="weights/res1" )
+parser.add_argument("--train_images", type = str, default="data/training_images/" )
+parser.add_argument("--train_annotations", type = str, default="data/training_images_annotation/"  )
+parser.add_argument("--n_classes", type=int, default=2)
+parser.add_argument("--input_height", type=int , default = 500  )
+parser.add_argument("--input_width", type=int , default = 500 )
 
 parser.add_argument('--validate',action='store_false')
 parser.add_argument("--val_images", type = str , default = "data/dataset1/images_prepped_test/")
