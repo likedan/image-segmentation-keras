@@ -6,7 +6,7 @@ import itertools
 import cv2
 
 
-def getImageArr( path , width , height , imgNorm="divide" , odering='channels_first' ):
+def getImageArr( path , width , height , imgNorm="divide" , odering='channels_last' ):
 
 	try:
 		img = cv2.imread(path, 1)

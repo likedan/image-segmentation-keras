@@ -2,20 +2,19 @@ import os
 from shutil import copyfile
 
 
-import cv2
-# pruned_files = os.listdir("../data/training_images/")
-# all_files = os.listdir("../data/training_images_annotation/")
+# pruned_files = os.listdir("../data/testing_images/")
+# all_files = os.listdir("../data/training_images/")
 #
 # missing_files = list(set(all_files) - set(pruned_files))
 # for file in missing_files:
-#     os.rename("../data/training_images_annotation/"+file, "../data/bad_images/"+file)
+#     file = file.replace(".jpg", ".png")
+#     os.rename("../data/alpha_image/"+file, "../data/sample_bad_images/"+file)
 
-
-
-to_move_files = os.listdir("../data/bad_images/")
-
-for file in to_move_files:
-    copyfile("../data/alpha_image/"+file, "../data/sample_bad_images/"+file)
+#
+# to_move_files = os.listdir("../data/bad_images/")
+#
+# for file in to_move_files:
+#     copyfile("../data/alpha_image/"+file, "../data/sample_bad_images/"+file)
 
 # to_remove_files = os.listdir("../data/bad_images/")
 # for file in to_remove_files:
@@ -27,3 +26,8 @@ for file in to_move_files:
 # img *=255
 # cv2.imshow("img", img)
 # cv2.waitKey(0)
+
+pruned_files = os.listdir("../data/testing_images/")
+all_files = os.listdir("../data/training_images/")
+print(len(list(set(all_files).union(set(pruned_files)))))
+print(len(all_files) + len(pruned_files))

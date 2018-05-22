@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f789d9aa-b2d7-4e89-a073-f6ddf82c4f1c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/convert_to_coreml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VGGUnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/VGGUnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoadBatches.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadBatches.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/move_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/move_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/synthasize_training_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthasize_training_image.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,18 +15,18 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/image_segmentation$synthasize_training_image.coverage" NAME="synthasize_training_image Coverage Results" MODIFIED="1526947751370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation_keras$train.coverage" NAME="train Coverage Results" MODIFIED="1526767083408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_segmentation$train.coverage" NAME="train Coverage Results" MODIFIED="1526947263800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_segmentation$train.coverage" NAME="train Coverage Results" MODIFIED="1526949689975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation$convert_to_coreml.coverage" NAME="convert_to_coreml Coverage Results" MODIFIED="1526944035607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation$predict.coverage" NAME="predict Coverage Results" MODIFIED="1526935546890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation$white_to_alpha.coverage" NAME="white_to_alpha Coverage Results" MODIFIED="1526829156460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_segmentation$filter_non_exists.coverage" NAME="filter_non_exists Coverage Results" MODIFIED="1526939549510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_segmentation$filter_non_exists.coverage" NAME="filter_non_exists Coverage Results" MODIFIED="1526950255024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="synthasize_training_image.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/synthasize_training_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="-237">
               <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -50,6 +47,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LoadBatches.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoadBatches.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="82" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+              <folding>
+                <element signature="e#1#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="write_to_alpha.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/write_to_alpha.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VGGUnet.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VGGUnet.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VGGUnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="-1177">
               <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -101,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="move_file.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="move_file.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/move_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="453">
+              <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -121,15 +130,6 @@
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_keras_converter.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/coremltools/converters/keras/_keras_converter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="606" column="10" selection-start-line="606" selection-start-column="4" selection-end-line="606" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -178,13 +178,13 @@
         <option value="$PROJECT_DIR$/filter_non_exists.py" />
         <option value="$PROJECT_DIR$/VGGSegnet.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/LoadBatches.py" />
         <option value="$PROJECT_DIR$/write_to_alpha.py" />
         <option value="$PROJECT_DIR$/predict.py" />
-        <option value="$PROJECT_DIR$/move_file.py" />
         <option value="$PROJECT_DIR$/convert_to_coreml.py" />
         <option value="$PROJECT_DIR$/synthasize_training_image.py" />
         <option value="$PROJECT_DIR$/VGGUnet.py" />
+        <option value="$PROJECT_DIR$/LoadBatches.py" />
+        <option value="$PROJECT_DIR$/move_file.py" />
       </list>
     </option>
   </component>
@@ -199,7 +199,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="501" />
-    <option name="y" value="94" />
+    <option name="y" value="93" />
     <option name="width" value="1981" />
     <option name="height" value="965" />
   </component>
@@ -257,7 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.filter_non_exists">
     <configuration name="convert_to_coreml" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image-segmentation-keras" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -362,10 +362,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.synthasize_training_image" />
-        <item itemvalue="Python.train" />
-        <item itemvalue="Python.convert_to_coreml" />
         <item itemvalue="Python.filter_non_exists" />
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.synthasize_training_image" />
+        <item itemvalue="Python.convert_to_coreml" />
         <item itemvalue="Python.predict" />
       </list>
     </recent_temporary>
@@ -384,7 +384,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="501" y="94" width="1981" height="965" extended-state="0" />
+    <frame x="501" y="93" width="1981" height="965" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -655,47 +656,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoadBatches.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/coremltools/converters/keras/_keras_converter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="606" column="10" selection-start-line="606" selection-start-column="4" selection-end-line="606" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/move_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/write_to_alpha.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/synthasize_training_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -719,16 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/layers/convolutional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -745,10 +699,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VGGUnet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="-1177">
           <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/synthasize_training_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoadBatches.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="82" selection-start-line="8" selection-start-column="82" selection-end-line="8" selection-end-column="82" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/write_to_alpha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/move_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
