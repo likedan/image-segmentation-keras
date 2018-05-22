@@ -1,4 +1,7 @@
 import os
+from shutil import copyfile
+
+
 import cv2
 # pruned_files = os.listdir("../data/training_images/")
 # all_files = os.listdir("../data/training_images_annotation/")
@@ -9,10 +12,10 @@ import cv2
 
 
 
-to_move_files = os.listdir("../data/testing_images_annotation/")
+to_move_files = os.listdir("../data/bad_images/")
 
 for file in to_move_files:
-    os.rename("../data/training_images/"+file, "../data/testing_images/"+file)
+    copyfile("../data/alpha_image/"+file, "../data/sample_bad_images/"+file)
 
 # to_remove_files = os.listdir("../data/bad_images/")
 # for file in to_remove_files:

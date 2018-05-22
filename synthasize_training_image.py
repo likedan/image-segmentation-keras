@@ -29,7 +29,7 @@ def transparentOverlay(src, overlay, pos=(0, 0), scale=1):
 
 testing_images = os.listdir("../data/testing_images")
 training_images = os.listdir("../data/training_images")
-bad_images = os.listdir("../data/bad_images")
+bad_images = os.listdir("../data/sample_bad_images")
 
 texture_images = os.listdir("../data/texture")
 texture_images.remove(".DS_Store")

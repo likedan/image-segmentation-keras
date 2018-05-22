@@ -5,9 +5,9 @@ import os
 
 file_path = os.path.dirname(os.path.abspath(__file__))
 
-VGG_Weights_path = file_path + "/../data/vgg16_weights_th_dim_ordering_th_kernels.h5"
+VGG_Weights_path = file_path + "/../data/vgg16_weights_tf_dim_ordering_tf_kernels.h5"
 
-IMAGE_ORDERING = 'channels_first'
+IMAGE_ORDERING = 'channels_last'
 
 
 def VGGUnet(n_classes, input_height=416, input_width=608, vgg_level=3):
@@ -15,7 +15,7 @@ def VGGUnet(n_classes, input_height=416, input_width=608, vgg_level=3):
     assert input_width % 32 == 0
 
     # https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_th_dim_ordering_th_kernels.h5
-    img_input = Input(shape=(3, input_height, input_width))
+    img_input = Input(shape=(input_height, input_width, 3))
 
     x = Conv2D(64, (3, 3), activation='relu', padding='same', name='block1_conv1', data_format=IMAGE_ORDERING)(
         img_input)
@@ -66,27 +66,27 @@ def VGGUnet(n_classes, input_height=416, input_width=608, vgg_level=3):
     o = (BatchNormalization())(o)
 
     o = (UpSampling2D((2, 2), data_format=IMAGE_ORDERING))(o)
-    o = (concatenate([o, f3], axis=1))
+    o = (concatenate([o, f3], axis=3))
     o = (ZeroPadding2D((1, 1), data_format=IMAGE_ORDERING))(o)
     o = (Conv2D(256, (3, 3), padding='valid', data_format=IMAGE_ORDERING))(o)
     o = (BatchNormalization())(o)
 
     o = (UpSampling2D((2, 2), data_format=IMAGE_ORDERING))(o)
-    o = (concatenate([o, f2], axis=1))
+    o = (concatenate([o, f2], axis=3))
     o = (ZeroPadding2D((1, 1), data_format=IMAGE_ORDERING))(o)
     o = (Conv2D(128, (3, 3), padding='valid', data_format=IMAGE_ORDERING))(o)
     o = (BatchNormalization())(o)
 
     o = (UpSampling2D((2, 2), data_format=IMAGE_ORDERING))(o)
-    o = (concatenate([o, f1], axis=1))
+    o = (concatenate([o, f1], axis=3))
     o = (ZeroPadding2D((1, 1), data_format=IMAGE_ORDERING))(o)
     o = (Conv2D(64, (3, 3), padding='valid', data_format=IMAGE_ORDERING))(o)
     o = (BatchNormalization())(o)
 
     o = Conv2D(n_classes, (3, 3), padding='same', data_format=IMAGE_ORDERING)(o)
     o_shape = Model(img_input, o).output_shape
-    outputHeight = o_shape[2]
-    outputWidth = o_shape[3]
+    outputHeight = o_shape[1]
+    outputWidth = o_shape[2]
 
     o = (Reshape((n_classes, outputHeight * outputWidth)))(o)
     o = (Permute((2, 1)))(o)
