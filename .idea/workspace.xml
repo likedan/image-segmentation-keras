@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f789d9aa-b2d7-4e89-a073-f6ddf82c4f1c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/VGGUnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/VGGUnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convert_to_coreml.py" beforeDir="false" afterPath="$PROJECT_DIR$/convert_to_coreml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,31 +17,19 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/image_segmentation$synthasize_training_image.coverage" NAME="synthasize_training_image Coverage Results" MODIFIED="1526947751370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation_keras$train.coverage" NAME="train Coverage Results" MODIFIED="1526767083408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_segmentation$train.coverage" NAME="train Coverage Results" MODIFIED="1526950874058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_segmentation$convert_to_coreml.coverage" NAME="convert_to_coreml Coverage Results" MODIFIED="1526944035607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/image_segmentation$predict.coverage" NAME="predict Coverage Results" MODIFIED="1526935546890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_segmentation$train.coverage" NAME="train Coverage Results" MODIFIED="1526959608902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_segmentation$convert_to_coreml.coverage" NAME="convert_to_coreml Coverage Results" MODIFIED="1526959657062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/image_segmentation$predict.coverage" NAME="predict Coverage Results" MODIFIED="1526959242716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation$white_to_alpha.coverage" NAME="white_to_alpha Coverage Results" MODIFIED="1526829156460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/image_segmentation$filter_non_exists.coverage" NAME="filter_non_exists Coverage Results" MODIFIED="1526950255024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="synthasize_training_image.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/synthasize_training_image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237">
-              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="90">
+              <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -67,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VGGUnet.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VGGUnet.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VGGUnet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1177">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="233">
+              <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -79,20 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="merge.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/layers/merge.py">
+      <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/layers/core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="640" selection-start-line="640" selection-end-line="640" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="convolutional.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/layers/convolutional.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="431" column="8" selection-start-line="431" selection-start-column="8" selection-end-line="431" selection-end-column="8" />
+            <state relative-caret-position="178">
+              <caret line="443" column="8" selection-start-line="443" selection-start-column="8" selection-end-line="443" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -100,8 +82,8 @@
       <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="28" selection-start-line="28" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="141">
+              <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -124,8 +106,8 @@
       <file leaf-file-name="convert_to_coreml.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convert_to_coreml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="60">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="25" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -161,6 +143,8 @@
       <find>image_size</find>
       <find>is_bgr</find>
       <find>IMAGE_ORDERING</find>
+      <find>permute_1</find>
+      <find>conv2d</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,13 +161,13 @@
         <option value="$PROJECT_DIR$/filter_non_exists.py" />
         <option value="$PROJECT_DIR$/VGGSegnet.py" />
         <option value="$PROJECT_DIR$/write_to_alpha.py" />
-        <option value="$PROJECT_DIR$/predict.py" />
-        <option value="$PROJECT_DIR$/convert_to_coreml.py" />
         <option value="$PROJECT_DIR$/synthasize_training_image.py" />
-        <option value="$PROJECT_DIR$/VGGUnet.py" />
         <option value="$PROJECT_DIR$/LoadBatches.py" />
         <option value="$PROJECT_DIR$/move_file.py" />
+        <option value="$PROJECT_DIR$/convert_to_coreml.py" />
         <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/predict.py" />
+        <option value="$PROJECT_DIR$/VGGUnet.py" />
       </list>
     </option>
   </component>
@@ -198,7 +182,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="501" />
-    <option name="y" value="93" />
+    <option name="y" value="92" />
     <option name="width" value="1981" />
     <option name="height" value="965" />
   </component>
@@ -256,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.convert_to_coreml">
     <configuration name="convert_to_coreml" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="image-segmentation-keras" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -361,11 +345,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.convert_to_coreml" />
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.predict" />
         <item itemvalue="Python.filter_non_exists" />
         <item itemvalue="Python.synthasize_training_image" />
-        <item itemvalue="Python.convert_to_coreml" />
-        <item itemvalue="Python.predict" />
       </list>
     </recent_temporary>
   </component>
@@ -383,7 +367,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="501" y="93" width="1981" height="965" extended-state="0" />
+    <frame x="501" y="92" width="1981" height="965" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -655,33 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/coremltools/converters/keras/_keras_converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="606" column="10" selection-start-line="606" selection-start-column="4" selection-end-line="606" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convert_to_coreml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/predict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="28" selection-start-line="28" selection-end-line="34" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/layers/convolutional.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -693,16 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="640" selection-start-line="640" selection-end-line="640" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VGGUnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1177">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,10 +673,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/coremltools/converters/keras/_keras_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="542" selection-start-line="542" selection-end-line="542" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/write_to_alpha.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" selection-start-line="22" selection-end-line="26" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/coremltools/converters/keras/_keras2_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="300" selection-start-line="300" selection-end-line="300" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/coremltools/converters/keras/_layers2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="800" column="26" selection-start-line="800" selection-start-column="26" selection-end-line="800" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -743,12 +711,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/layers/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="443" column="8" selection-start-line="443" selection-start-column="8" selection-end-line="443" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="90">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convert_to_coreml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VGGUnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

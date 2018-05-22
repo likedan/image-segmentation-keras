@@ -4,7 +4,7 @@ import VGGUnet
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--save_weights_path", type = str, default="weights/r" )
+parser.add_argument("--save_weights_path", type = str, default="weights/r_t" )
 parser.add_argument("--train_images", type = str, default="../data/training_images/" )
 parser.add_argument("--train_annotations", type = str, default="../data/training_images_annotation/"  )
 parser.add_argument("--n_classes", type=int, default=2)

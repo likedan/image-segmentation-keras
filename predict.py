@@ -5,10 +5,11 @@ import cv2
 import numpy as np
 import random
 import VGGUnet
+from keras import Model
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--save_weights_path", type=str, default="weights/r")
-parser.add_argument("--epoch_number", type=int, default=5)
+parser.add_argument("--epoch_number", type=int, default=6)
 parser.add_argument("--test_images", type=str, default="../result/to_test/")
 parser.add_argument("--output_path", type=str, default="../result/5/")
 parser.add_argument("--input_height", type=int, default=224)
@@ -46,6 +47,12 @@ for imgName in images:
     outName = imgName.replace(images_path, args.output_path)
     X = LoadBatches.getImageArr(imgName, args.input_width, args.input_height)
     pr = m.predict(np.array([X]))[0]
+
+    model2 = Model(input=m.input, output=m.layers[-3].output)
+    pr2 = model2.predict(np.array([X]))[0]
+
+    print(pr, pr2)
+
     opr = pr
     pr = pr.reshape((output_height, output_width, n_classes)).argmax(axis=2)
     seg_img = np.zeros((output_height, output_width, 3))

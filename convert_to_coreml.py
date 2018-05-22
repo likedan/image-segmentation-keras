@@ -1,12 +1,15 @@
 import coremltools
 import VGGUnet
+from keras import Model
 
 modelFN = VGGUnet.VGGUnet
-weight_file = "weights/r.7"
+weight_file = "weights/r.6"
 
 model = modelFN(2, input_height=224, input_width=224)
-model.load_weights(weight_file)
-
+# model.load_weights(weight_file)
+print(model.summary())
+model2 = Model(input=model.input, output=model.layers[-3].output)
+print(model2.summary())
 coreml_model = coremltools.converters.keras.convert(model,
 	input_names="image",
 	image_input_names="image",

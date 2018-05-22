@@ -88,8 +88,8 @@ def VGGUnet(n_classes, input_height=416, input_width=608, vgg_level=3):
     outputHeight = o_shape[1]
     outputWidth = o_shape[2]
 
-    o = (Reshape((n_classes, outputHeight * outputWidth)))(o)
-    o = (Permute((2, 1)))(o)
+    o = (Reshape((outputHeight * outputWidth, n_classes)))(o)
+    # o = (Permute((2, 1)))(o)
     o = (Activation('softmax'))(o)
     model = Model(img_input, o)
     model.outputWidth = outputWidth
@@ -176,8 +176,8 @@ def VGGUnet2(n_classes, input_height=416, input_width=608, vgg_level=3):
     outputHeight = o_shape[2]
     outputWidth = o_shape[3]
 
-    o = (Reshape((n_classes, outputHeight * outputWidth)))(o)
-    o = (Permute((2, 1)))(o)
+    o = (Reshape((outputHeight * outputWidth, n_classes)))(o)
+    # o = (Permute((2, 1)))(o)
     o = (Activation('softmax'))(o)
     model = Model(img_input, o)
     model.outputWidth = outputWidth
