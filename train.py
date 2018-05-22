@@ -71,16 +71,15 @@ if validate:
 step_num = int(len(os.listdir("../data/training_images_annotation/")) / train_batch_size)
 val_step_num = int(len(os.listdir("../data/testing_images_annotation/")) / val_batch_size)
 
+m.save(save_weights_path + ".model")
 
 if not validate:
 	for ep in range( epochs ):
 		m.fit_generator( G , step_num  , epochs=1 )
 		m.save_weights( save_weights_path + "." + str( ep ) )
-		m.save( save_weights_path + ".model." + str( ep ) )
 else:
 	for ep in range( epochs ):
 		m.fit_generator( G , step_num  , validation_data=G2 , validation_steps=val_step_num ,  epochs=1 )
 		m.save_weights( save_weights_path + "." + str( ep )  )
-		m.save( save_weights_path + ".model." + str( ep ) )
 
 
